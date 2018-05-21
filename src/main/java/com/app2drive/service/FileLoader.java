@@ -8,13 +8,15 @@ import java.util.List;
 public class FileLoader {
     
     public void readFilesFromFolder(File folder, List<String> list) {
-        for (File file : folder.listFiles()) {
-            if (file.isDirectory()) {
-                System.out.println("directopry " + file.getName());
-                readFilesFromFolder(file, list);
-            } else {
-                System.out.println(file.getName());
-                readFile(file, list);
+        if (folder.exists()) {
+            for (File file : folder.listFiles()) {
+                if (file.isDirectory()) {
+                    System.out.println("directopry " + file.getName());
+                    readFilesFromFolder(file, list);
+                } else {
+                    System.out.println(file.getName());
+                    readFile(file, list);
+                }
             }
         }
     }
