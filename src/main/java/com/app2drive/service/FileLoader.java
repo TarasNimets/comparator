@@ -11,10 +11,10 @@ public class FileLoader {
         if (folder.exists()) {
             for (File file : folder.listFiles()) {
                 if (file.isDirectory()) {
-                    System.out.println("directopry " + file.getName());
+//                    System.out.println("directopry " + file.getName());
                     readFilesFromFolder(file, list);
                 } else {
-                    System.out.println(file.getName());
+//                    System.out.println(file.getName());
                     readFile(file, list);
                 }
             }
