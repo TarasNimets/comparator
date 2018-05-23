@@ -4,32 +4,54 @@ import java.io.Serializable;
 
 public class Source implements Serializable{
     
-    private String BPKTON;
-    private String BBETRN;
-    private String BRENRN;
-    private String BLRENN;
-    private String BSTEUN;
+    private String invoiceNumber;
+    private String invoiceType;
+    private String accountingState;
+    private String createDate;
+    private String updateDate;
+    private String bPKTON;
+    private String bBETRN;
+    private String bSOHAN;
+    private String bRENRN;
+    private String bLRENN;
+    private String bSTEUN;
     
     private Source() {
     }
-    
+
+    public Source(String invoiceNumber, String invoiceType, String accountingState, String createDate,
+            String updateDate, String bPKTON, String bBETRN, String bSOHAN, String bRENRN, String bLRENN,
+            String bSTEUN) {
+        this.invoiceNumber = invoiceNumber;
+        this.invoiceType = invoiceType;
+        this.accountingState = accountingState;
+        this.createDate = createDate;
+        this.updateDate = updateDate;
+        this.bPKTON = bPKTON;
+        this.bBETRN = bBETRN;
+        this.bSOHAN = bSOHAN;
+        this.bRENRN = bRENRN;
+        this.bLRENN = bLRENN;
+        this.bSTEUN = bSTEUN;
+    }
+
     public Source(String BPKTON, String BBETRN, String BRENRN, String BLRENN, String BSTEUN) {
-        this.BPKTON = BPKTON;
-        this.BBETRN = BBETRN;
-        this.BRENRN = BRENRN;
-        this.BLRENN = BLRENN;
-        this.BSTEUN = BSTEUN;
+        this.bPKTON = BPKTON;
+        this.bBETRN = BBETRN;
+        this.bRENRN = BRENRN;
+        this.bLRENN = BLRENN;
+        this.bSTEUN = BSTEUN;
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((BBETRN == null) ? 0 : BBETRN.hashCode());
-        result = prime * result + ((BLRENN == null) ? 0 : BLRENN.hashCode());
-        result = prime * result + ((BPKTON == null) ? 0 : BPKTON.hashCode());
-        result = prime * result + ((BRENRN == null) ? 0 : BRENRN.hashCode());
-        result = prime * result + ((BSTEUN == null) ? 0 : BSTEUN.hashCode());
+        result = prime * result + ((bBETRN == null) ? 0 : bBETRN.hashCode());
+        result = prime * result + ((bLRENN == null) ? 0 : bLRENN.hashCode());
+        result = prime * result + ((bPKTON == null) ? 0 : bPKTON.hashCode());
+        result = prime * result + ((bRENRN == null) ? 0 : bRENRN.hashCode());
+        result = prime * result + ((bSTEUN == null) ? 0 : bSTEUN.hashCode());
         return result;
     }
 
@@ -42,57 +64,84 @@ public class Source implements Serializable{
         if (getClass() != obj.getClass())
             return false;
         Source other = (Source) obj;
-        if (BBETRN == null) {
-            if (other.BBETRN != null)
+        if (bBETRN == null) {
+            if (other.bBETRN != null)
                 return false;
-        } else if (!BBETRN.equals(other.BBETRN))
+        } else if (!bBETRN.equals(other.bBETRN))
             return false;
-        if (BLRENN == null) {
-            if (other.BLRENN != null)
+        if (bLRENN == null) {
+            if (other.bLRENN != null)
                 return false;
-        } else if (!BLRENN.equals(other.BLRENN))
+        } else if (!bLRENN.equals(other.bLRENN))
             return false;
-        if (BPKTON == null) {
-            if (other.BPKTON != null)
+        if (bPKTON == null) {
+            if (other.bPKTON != null)
                 return false;
-        } else if (!BPKTON.equals(other.BPKTON))
+        } else if (!bPKTON.equals(other.bPKTON))
             return false;
-        if (BRENRN == null) {
-            if (other.BRENRN != null)
+        if (bRENRN == null) {
+            if (other.bRENRN != null)
                 return false;
-        } else if (!BRENRN.equals(other.BRENRN))
+        } else if (!bRENRN.equals(other.bRENRN))
             return false;
-        if (BSTEUN == null) {
-            if (other.BSTEUN != null)
+        if (bSTEUN == null) {
+            if (other.bSTEUN != null)
                 return false;
-        } else if (!BSTEUN.equals(other.BSTEUN))
+        } else if (!bSTEUN.equals(other.bSTEUN))
             return false;
         return true;
     }
 
-    public String getBPKTON() {
-        return BPKTON;
+    public String getInvoiceNumber() {
+        return invoiceNumber;
     }
 
-    public String getBBETRN() {
-        return BBETRN;
+    public String getInvoiceType() {
+        return invoiceType;
     }
 
-    public String getBRENRN() {
-        return BRENRN;
+    public String getAccountingState() {
+        return accountingState;
     }
 
-    public String getBLRENN() {
-        return BLRENN;
+    public String getCreateDate() {
+        return createDate;
     }
 
-    public String getBSTEUN() {
-        return BSTEUN;
+    public String getUpdateDate() {
+        return updateDate;
+    }
+
+    public String getbPKTON() {
+        return bPKTON;
+    }
+
+    public String getbBETRN() {
+        return bBETRN;
+    }
+
+    public String getbRENRN() {
+        return bRENRN;
+    }
+
+    public String getbLRENN() {
+        return bLRENN;
+    }
+
+    public String getbSTEUN() {
+        return bSTEUN;
+    }
+
+    public String getbSOHAN() {
+        return bSOHAN;
     }
 
     @Override
     public String toString() {
-        return "Source [BPKTON=" + BPKTON + ", BBETRN=" + BBETRN + ", BRENRN=" + BRENRN + ", BLRENN=" + BLRENN
-                + ", BSTEUN=" + BSTEUN + "]";
+        return "Source [invoiceNumber=" + invoiceNumber + ", invoiceType=" + invoiceType + ", accountingState="
+                + accountingState + ", createDate=" + createDate + ", updateDate=" + updateDate + ", bPKTON=" + bPKTON
+                + ", bBETRN=" + bBETRN + ", bSOHAN=" + bSOHAN + ", bRENRN=" + bRENRN + ", bLRENN=" + bLRENN
+                + ", bSTEUN=" + bSTEUN + "]";
     }
+
 }

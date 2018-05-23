@@ -46,7 +46,7 @@ public class Worker {
 
     private void listOfNotNullAmount(List<Source> result) {
         for (Source source : result) {
-            if (!source.getBBETRN().equals("0.00")) {
+            if (!source.getbBETRN().equals("0.00")) {
                 System.out.println(source);
             }
         }

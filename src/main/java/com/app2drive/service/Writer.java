@@ -22,13 +22,19 @@ public class Writer {
 
     private String convertToCSV(List<Source> list) {
         StringBuilder builder = new StringBuilder();
-        builder.append("BPKTON,BBETRN,BRENRN,BLRENN,BSTEUN").append("\n");
+        builder.append("invoiceNumber,invoiceType,accountingState,createDate,updateDate,BPKTON,BBETRN,BSOHAN,BRENRN,BLRENN,BSTEUN").append("\n");
         for (Source source : list) {
-            builder.append(source.getBPKTON()).append(',')
-                    .append(source.getBBETRN()).append(',')
-                    .append(source.getBRENRN()).append(',')
-                    .append(source.getBLRENN()).append(',')
-                    .append(source.getBSTEUN())
+            builder.append(source.getInvoiceNumber()).append(',')
+                    .append(source.getInvoiceType()).append(',')
+                    .append(source.getAccountingState()).append(',')
+                    .append(source.getCreateDate()).append(',')
+                    .append(source.getUpdateDate()).append(',')
+                    .append(source.getbPKTON()).append(',')
+                    .append(source.getbBETRN()).append(',')
+                    .append(source.getbSOHAN()).append(',')
+                    .append(source.getbRENRN()).append(',')
+                    .append(source.getbLRENN()).append(',')
+                    .append(source.getbSTEUN())
                     .append("\n");
         }
         return builder.toString();

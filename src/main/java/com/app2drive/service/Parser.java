@@ -13,7 +13,8 @@ public class Parser {
             String[] tempLine;
             for (String oneLine : sources) {
                 tempLine = oneLine.split(",");
-                listOfObject.add(new Source(tempLine[48], tempLine[51], tempLine[55], tempLine[57], tempLine[69]));
+                listOfObject.add(new Source(tempLine[0], tempLine[2], tempLine[3], tempLine[5], tempLine[6], tempLine[48], tempLine[51], tempLine[52], 
+                        tempLine[55], tempLine[57], tempLine[69]));
             }
         }
         return listOfObject;
